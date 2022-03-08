@@ -12,6 +12,7 @@ namespace Lesson3_Homework_1
         {
             int[,] array = new int[5, 5];
 
+            Console.WriteLine("Lesson3 Homework.\nPart 1.\n");
             Console.WriteLine("Fill array with elements:");
 
             Lesson3.MakeRandomArray(array);
@@ -22,16 +23,27 @@ namespace Lesson3_Homework_1
             Lesson3.MakeDiag(array);
             ArrayPrint(array);
 
-            Console.WriteLine("-------------------------------------------------------------------------------\n");
+            Console.WriteLine("-------------------------------------------------------------------------------");
+            Console.WriteLine("Part 2.\n");
 
             string[,] array2 = Lesson3.MakePhoneList();
             ArrayPrint(array2);
 
-            
+            Console.WriteLine("-------------------------------------------------------------------------------");
+            Console.WriteLine("Part 3.\n");
+
+            Console.WriteLine("Enter some words:");
+            string text = Console.ReadLine();
+            Console.WriteLine("Reverse string:");
+            Console.WriteLine(Lesson3.ReverseString(text));
 
             Console.ReadKey();
         }
-
+        /// <summary>
+        /// Method for printing int array
+        /// </summary>
+        /// <param name="array"></param>
+        /// <returns>array</returns>
         internal static int[,] ArrayPrint(int[,] array)
         {
             for (int i = 0; i < array.GetLength(0); i++)
@@ -44,6 +56,11 @@ namespace Lesson3_Homework_1
             }
             return array;
         }
+        /// <summary>
+        /// Method for printing string array
+        /// </summary>
+        /// <param name="array"></param>
+        /// <returns>array</returns>
         internal static string[,] ArrayPrint(string[,] array)
         {
             for (int i = 0; i < array.GetLength(0); i++)

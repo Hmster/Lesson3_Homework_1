@@ -45,7 +45,10 @@ namespace Lesson3_Homework_1
             return array;
         }
 
-
+        /// <summary>
+        /// Fill string array
+        /// </summary>
+        /// <returns>array</returns>
         internal static string[,] MakePhoneList()
         {
             string[,] array = 
@@ -57,6 +60,21 @@ namespace Lesson3_Homework_1
                 {"Maxim", "777-77-77 / m@a.com"}
             };
             return array;
+        }
+
+        /// <summary>
+        /// Reverse string
+        /// </summary>
+        /// <param name="text"></param>
+        /// <returns>string</returns>
+        internal static string ReverseString(string text)
+        {
+            string revText = "";
+            for (int i = 1; i <= text.Length; i++)
+            {
+               revText += text[text.Length - i];
+            }
+            return revText;
         }
     }
 }
